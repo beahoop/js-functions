@@ -121,10 +121,14 @@ function multiply(num1, num2, num3, num4) {
 // we want it to search an array and find the longest string and return that
 // need a for loop to search an array and arrange by length
 function findLongestWord(arr) {
+  //using arr for array
   const sortedarr = arr.sort(function(a, b) {
+    //using the sort method to sort the array and sort it as a new varible
   return b.length - a.length;
+  // asking javascript nicely to set the order of the array from largest to smallest
 });
   return sortedarr[0].length;
+  //asking javascript to return the length of the 1st item in the array in variable sortedarr
 
 }
 
@@ -133,18 +137,32 @@ function findLongestWord(arr) {
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
 
+  //need javascript to ideinfted strings that are longer than i then return only the longer items
+
 function filterLongWords(arr2, i) {
-    if (arr2.length > i.length) {
-      return arr2;
-    } else {
-      return i;
+  const newArray = [];
+  for(let j=0; j < arr2.length; j++) {
+    // console.log('j', j);
+    if(arr2[j].length > i) {
+      newArray.push(arr2[j]);
     }
   }
+  // console.log(newArray);
+  return newArray;
+}
+
+
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
+{a:1
+  b:3
+  c:7
+}
+function charFreq() {
 
+}
 
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
