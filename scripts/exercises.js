@@ -118,14 +118,28 @@ function multiply(num1, num2, num3, num4) {
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
+// we want it to search an array and find the longest string and return that
+// need a for loop to search an array and arrange by length
+function findLongestWord(arr) {
+  const sortedarr = arr.sort(function(a, b) {
+  return b.length - a.length;
+});
+  return sortedarr[0].length;
 
+}
 
 
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
 
-
+function filterLongWords(arr2, i) {
+    if (arr2.length > i.length) {
+      return arr2;
+    } else {
+      return i;
+    }
+  }
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
@@ -158,7 +172,7 @@ function multiply(num1, num2, num3, num4) {
 
   console.assert(findLongestWord(['hello', 'world', 'does','anyone', 'really', 'know', 'what', 'time', 'it', 'is']) === 6, 'ERROR function findLongestWord');
 
-  console.assert(filterLongWords(['hello', 'world', 'does','anyone', 'really', 'know', 'what', 'time', 'it', 'is'], 4).length === 4, 'function findLongestWords');
+  console.assert(filterLongWords(['hello', 'world', 'does','anyone', 'really', 'know', 'what', 'time', 'it', 'is'], 4).length === 4, 'ERROR function filterLongWords');
 
   console.assert(charFreq('abbabcbdbabdbdbabababcbcbab').a === 7);
 
