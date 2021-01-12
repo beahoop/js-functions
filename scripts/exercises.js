@@ -102,7 +102,19 @@ function multiply(num1, num2, num3, num4) {
   // ---------------------
 
 
-
+  function reverse(str) {
+      // Use the split() method to return a new array
+      let splitString = str.split("");
+      // Use the reverse() method to reverse the new created array
+      let reverseArray = splitString.reverse();
+      //Use the join() method to join all elements of the array into a string
+      let joinArray = reverseArray.join("");
+      // Return the reversed string
+      return joinArray; //
+  }
+//funtion reverse(str){
+// return str.split("").reverse().join("");
+// }
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
