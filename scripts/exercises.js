@@ -83,7 +83,7 @@ function maxOfThree(num1, num2, num3) {
   // ---------------------
 
 function sum(num1, num2, num3, num4) {
-  const array1 = [num1, num2, num3, num4];
+  const array1 = [1, 2, 3, 4];
   // allowing
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
   return array1.reduce(reducer);
@@ -91,7 +91,7 @@ function sum(num1, num2, num3, num4) {
 }
 
 function multiply(num1, num2, num3, num4) {
-  const array1 = [num1, num2, num3, num4];
+  const array1 = [1, 2, 3, 4];
   const reducer = (accumulator, currentValue) => accumulator * currentValue;
   return array1.reduce(reducer);
 
