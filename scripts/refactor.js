@@ -33,7 +33,9 @@ function doSomethingCool() {
 
 // Put your answer below -------------------------
 
-
+function() {
+console.log(("Something Cool!");)
+}(var = doSomethingCool)
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -53,6 +55,7 @@ setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
 
+setTimeout("Hello, World!", 2000);
 
 // -----------------------------------------------
 
@@ -82,7 +85,10 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
+[c]
 
+//var can be change in your funtion you tell javascript var is now y
+// then later you have told javascript that the var is not z
 
 // -----------------------------------------------
 
@@ -104,7 +110,11 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
+var revereStr = (str) => str.split("").reverse().join("")
 
+//in the funcation above we are setting var to reverseStr and then wanting it to return str
+//with the refactor we are setting the return of reverStr to be equal to the outcome of str
+//using the arrow functions we return the function and string methods together
 
 
 // -----------------------------------------------
@@ -157,7 +167,8 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
-
+var foo;
+foo = "bar";
 
 // -----------------------------------------------
 
@@ -181,7 +192,10 @@ var callTenTimes = function(callback) {
 // callTenTime(functionName);
 
 // Put your answer below -------------------------
-
+function callNtimes(callback, num) {
+  var range = Array.from(Array(num).keys());
+  range.forEach(callback);
+};
 
 // -----------------------------------------------
 
@@ -210,7 +224,15 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 
+var score = {
+  var increaseScore = function() {
+    score++;
+  };
+  var decreaseScore = function() {
+    score--;
+  };
 
+}
 
 // -----------------------------------------------
 
@@ -231,8 +253,13 @@ var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
 
+var addNumbers = function addNumbers(numberA, numberB) {
+  console.log(numberA + numberB);
+};
 
+var twoPlusTwo = addNumbers(2,2);
 
+//didn't have a call name for the function
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -258,7 +285,11 @@ var accelerate = function(amount) {
 
 // Put your answer below -------------------------
 
+var speed = 0;
 
+function accelerate(amount) {
+  return speed += amount;
+};
 
 // -----------------------------------------------
 
