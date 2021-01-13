@@ -140,10 +140,13 @@ function findLongestWord(arr) {
   //need javascript to ideinfted strings that are longer than i then return only the longer items
 
 function filterLongWords(arr2, i) {
+
   const newArray = [];
   for(let j=0; j < arr2.length; j++) {
     // console.log('j', j);
     if(arr2[j].length > i) {
+      // arr2 is calling on the array given then [j] is looping thru the given array with .length
+      // is then giving javascript the length of each array item and seeing if it is greater than i
       newArray.push(arr2[j]);
     }
   }
@@ -156,13 +159,21 @@ function filterLongWords(arr2, i) {
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
-{a:1
-  b:3
-  c:7
-}
-function charFreq() {
 
+  function charFreq(str) {
+    var obj={};
+    //assgins variable to empty object
+    var repeats=[];
+    str = "abbabcbdbabdbdbabababcbcbab"
+    //assgins varible to an array
+    for(var i=0, length = str.length; i < length; i++) {
+      //using a for loop to search the length of the str and if the length is less than x then
+        var l = str.charAt(i);
+        obj[l] = (isNaN(obj[l]) ? 1 : obj[l] + 1);
+    }
+    console.log(obj)
 }
+
 
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
@@ -199,4 +210,4 @@ function charFreq() {
   console.assert(charFreq('abbabcbdbabdbdbabababcbcbab').c === 3);
 
   console.assert(charFreq('abbabcbdbabdbdbabababcbcbab').d === 3);
-})();
+  })();
