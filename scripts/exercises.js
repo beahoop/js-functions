@@ -32,7 +32,9 @@ function maxOfThree(num1, num2, num3) {
   //it does this by search and returning the number of the string, i = 2 then 2 != -1, two is not equal to -1 which is true, but if we pass a letter that is not included there
   //will be no number for the index of to return causing it to return -1
   // -1 != -1, -1 is not equal to -1 is fasle.
-
+// funcation isVowel(char) {
+//   return 'aeiou'.includes(char);
+// }
 
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
@@ -82,13 +84,21 @@ function maxOfThree(num1, num2, num3) {
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
 
-function sum(num1, num2, num3, num4) {
-  const array1 = [1, 2, 3, 4];
-  // allowing
-  const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  return array1.reduce(reducer);
+// function sum(num1, num2, num3, num4) {
+//   const array1 = [1, 2, 3, 4];
+//   // allowing
+//   const reducer = (accumulator, currentValue) => accumulator + currentValue;
+//   return array1.reduce(reducer);
+//
+// }
 
-}
+function sum(arr) {
+  let result = 0;
+  for (let i = 0; i < arr.length; i++) {
+    result += arr[i]
+  }
+  return result;
+};
 
 function multiply(num1, num2, num3, num4) {
   const array1 = [1, 2, 3, 4];
@@ -129,9 +139,7 @@ function findLongestWord(arr) {
 });
   return sortedarr[0].length;
   //asking javascript to return the length of the 1st item in the array in variable sortedarr
-
 }
-
 
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
@@ -160,20 +168,31 @@ function filterLongWords(arr2, i) {
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
 
-  function charFreq(str) {
-    var obj={};
-    //assgins variable to empty object
-    var repeats=[];
-    str = "abbabcbdbabdbdbabababcbcbab"
-    //assgins varible to an array
-    for(var i=0, length = str.length; i < length; i++) {
-      //using a for loop to search the length of the str and if the length is less than x then
-        var l = str.charAt(i);
-        obj[l] = (isNaN(obj[l]) ? 1 : obj[l] + 1);
-    }
-    console.log(obj)
-}
+//   function charFreq(str) {
+//     var obj={};
+//     //assgins variable to empty object
+//     var repeats=[];
+//     str = "abbabcbdbabdbdbabababcbcbab"
+//     //assgins varible to an array
+//     for(var i=0, length = str.length; i < length; i++) {
+//       //using a for loop to search the length of the str and if the length is less than x then
+//         var l = str.charAt(i);
+//         obj[l] = (isNaN(obj[l]) ? 1 : obj[l] + 1);
+//     }
+//     console.log(obj)
+// }
 
+
+function charFreq(str) {
+  const freqList = {};
+  const strArray = str.split('');
+
+  for (var i = 0; i < strArray.length; i++) {
+    let char = strArray[i];
+    freqList[char] = freqList[char] + 1 || 1;
+  }
+return freqList;
+};
 
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////

@@ -32,10 +32,13 @@ function doSomethingCool() {
 }
 
 // Put your answer below -------------------------
+const doSomethingCool = function() {
+  console.log("Something Cool!")
+}
 
-function() {
-console.log(("Something Cool!");)
-}(var = doSomethingCool)
+// function() {
+// console.log(("Something Cool!");)
+// }(var = doSomethingCool)
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -57,6 +60,8 @@ setTimeout(sayHi, 2000);
 
 setTimeout("Hello, World!", 2000);
 
+setTimeout(function() {alert("Hello, World!")}, 2000);
+setTimeout(() => alert("Hello, World!"), 2000);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -110,7 +115,7 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-var revereStr = (str) => str.split("").reverse().join("")
+var revereStr = (str) => str.split("").reverse().join("");
 
 //in the funcation above we are setting var to reverseStr and then wanting it to return str
 //with the refactor we are setting the return of reverStr to be equal to the outcome of str
@@ -150,8 +155,19 @@ var spanishColor = function(colorName) {
 
 // Put your answer below -------------------------
 
+const color = {
+  rojo: "#ff0000",
+  blanco: "#ffffff",
+  azul:"#0000ff",
+  verde:"#00ff00",
+  nergro: "#000000",
+}
 
+const spanishColor = function(colorName) {
+  return colors[colorName];
+}
 
+const spainshColor = colorName => colors[colorNames];
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -197,6 +213,7 @@ function callNtimes(callback, num) {
   range.forEach(callback);
 };
 
+
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -224,16 +241,19 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 
-var score = {
+//use have to use strict mode to be sure noone can access the info in console
+funtion() {
+  'use strict';
+  var score = 0;
+
   var increaseScore = function() {
     score++;
   };
+
   var decreaseScore = function() {
     score--;
   };
-
-}
-
+}();
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -254,10 +274,11 @@ var twoPlusTwo = addNumbers(2,2);
 // Put your answer below -------------------------
 
 var addNumbers = function addNumbers(numberA, numberB) {
-  console.log(numberA + numberB);
+  return numberA + numberB;
 };
 
 var twoPlusTwo = addNumbers(2,2);
+
 
 //didn't have a call name for the function
 // -----------------------------------------------
@@ -285,10 +306,17 @@ var accelerate = function(amount) {
 
 // Put your answer below -------------------------
 
+// var speed = 0;
+//
+// function accelerate(amount) {
+//   return speed += amount;
+// };
+
+
 var speed = 0;
 
-function accelerate(amount) {
-  return speed += amount;
+var accelerate = function(amount) {
+  speed += amount || 1;
 };
 
 // -----------------------------------------------
